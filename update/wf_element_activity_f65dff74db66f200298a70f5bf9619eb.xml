@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="REST Web Service">8817a25e37222100aa40cc9fbe41f106</base_provider>
+        <category/>
+        <checked_out_by display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</checked_out_by>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_rest.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"pub_key","type":"STRING","mandatory":false,"defaultValue":"pub-c-11b9ede6-f9ee-4da8-a829-944a45f29eb8"},{"name":"sub_key","type":"STRING","mandatory":false,"defaultValue":"sub-c-dafe9b8c-1ae1-11e7-bc52-02ee2ddab7fe"},{"name":"channel","type":"STRING","mandatory":false,"defaultValue":"CCW3970_your_instance_here"},{"name":"client","type":"STRING","mandatory":false,"defaultValue":"your_instance_here"}]}</input_meta>
+        <input_process_script/>
+        <input_transform>{"web_service_message":"06522fa8db663200a2b4596e5e9619a1","web_service_message_function":"ad826be8db663200a2b4596e5e9619a6","web_service_endpoint":"","parameters":"[{\"name\":\"channel\",\"value\":\"${activityInput.channel}\",\"additional_attribute\":\"\"},{\"name\":\"client\",\"value\":\"${activityInput.client}\",\"additional_attribute\":\"\"},{\"name\":\"pub_key\",\"value\":\"${activityInput.pub_key}\",\"additional_attribute\":\"\"},{\"name\":\"sub_key\",\"value\":\"${activityInput.sub_key}\",\"additional_attribute\":\"\"}]","headers":"[]","queryParameters":"[]","midCapabilities":"18409d8007482000dada43c0d1021e8f","use_mid_server":"false","time_out":"10","auth_type":"use_existing_credentials","credentials":"","protocol_profile":"","oauth_entity_profile":""}</input_transform>
+        <local_variables/>
+        <name>Send to PubNub Hello World</name>
+        <output_meta>{"name":"Output","type":"DATA_OBJECT","properties":[{"name":"status_code","type":"STRING"}]}</output_meta>
+        <output_process_script/>
+        <output_transform>[{"toLink":"activityOutput.status_code","description":"","to":"status_code","toType":"string","toDestination":"activityOutput","sourceLabel":"executionResult.status_code","from":"${executionResult.status_code}","fromSource":"executionResult","type":"Direct","children":"[]","translation":""}]</output_transform>
+        <processing_script/>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-03 15:02:41</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f65dff74db66f200298a70f5bf9619eb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Send to PubNub Hello World</sys_name>
+        <sys_package display_value="CCW3970" source="x_snc_ccw3970">631edfacdb263200834adfea5e961983</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CCW3970">631edfacdb263200834adfea5e961983</sys_scope>
+        <sys_update_name>wf_element_activity_f65dff74db66f200298a70f5bf9619eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-03 15:06:12</sys_updated_on>
+        <version_container_id>5c8dbf74db66f200298a70f5bf9619ad</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=f65dff74db66f200298a70f5bf9619eb"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out>2017-05-03 15:02:41</checked_out>
+        <checked_out_by display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</checked_out_by>
+        <published>false</published>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-03 15:02:41</sys_created_on>
+        <sys_id>508dbf74db66f200298a70f5bf9619af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-03 15:02:41</sys_updated_on>
+        <valid_from/>
+        <valid_to/>
+        <version>1</version>
+        <version_container_id>5c8dbf74db66f200298a70f5bf9619ad</version_container_id>
+        <wf_element_definition display_value="Send to PubNub Hello World">f65dff74db66f200298a70f5bf9619eb</wf_element_definition>
+    </wf_versionable>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Send to PubNub Hello World">f65dff74db66f200298a70f5bf9619eb</activity_definition>
+        <condition/>
+        <derived_definition/>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Failure</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-03 15:06:12</sys_created_on>
+        <sys_id>313e37b4db66f200298a70f5bf961970</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-03 15:06:12</sys_updated_on>
+    </wf_condition_default>
+    <wf_condition_default action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Send to PubNub Hello World">f65dff74db66f200298a70f5bf9619eb</activity_definition>
+        <condition>activityOutput.status_code ==	200</condition>
+        <derived_definition/>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <name>Success</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-03 15:06:12</sys_created_on>
+        <sys_id>458d73b4db66f200298a70f5bf96195e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-03 15:06:12</sys_updated_on>
+    </wf_condition_default>
+    <wf_versionable action="update_multiple" query="version_container_id=5c8dbf74db66f200298a70f5bf9619ad^sys_id!=508dbf74db66f200298a70f5bf9619af">
+        <published>false</published>
+    </wf_versionable>
+    <wf_activity action="update_multiple" is_dot_walk_query="true" query="workflow_version.published=true^activity_definition.version_container_id=5c8dbf74db66f200298a70f5bf9619ad">
+        <new_activity_definition>f65dff74db66f200298a70f5bf9619eb</new_activity_definition>
+        <out_of_date>true</out_of_date>
+        <notes>There is a newer version of this activity. To update the activity, check out the workflow, select the activity, right click and select update activity to use the latest version.</notes>
+    </wf_activity>
+</record_update>

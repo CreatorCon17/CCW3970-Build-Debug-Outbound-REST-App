@@ -17,7 +17,7 @@
         <sys_class_name>sys_rest_message_fn</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-02 18:27:23</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>ad826be8db663200a2b4596e5e9619a6</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>Publish Message</sys_name>
